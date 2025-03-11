@@ -22,9 +22,7 @@
 
       .profile-section {
         display: flex;
-        flex-direction: row;
         align-items: center;
-        text-align: left;
         margin-bottom: 2rem;
         gap: 1.5rem;
       }
@@ -32,7 +30,6 @@
       .profile-info {
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
         gap: 0.25rem;
       }
 
@@ -68,22 +65,38 @@
       a {
         color: #2563eb;
         text-decoration: none;
-        position: relative;
       }
 
       a:hover {
         text-decoration: underline;
       }
 
-      /* Links container at the bottom */
-      main > div:last-child {
+      .links {
         margin-top: 2rem;
         display: flex;
         flex-wrap: wrap;
         gap: 1rem;
       }
 
-      /* Media queries for responsive design */
+      .name {
+        margin: 0;
+        font-size: 1.2rem;
+      }
+
+      .title {
+        margin: 0;
+        font-size: 1rem;
+        font-weight: normal;
+        color: #6d6b6b;
+      }
+
+      .subtitle {
+        margin: 0;
+        font-size: 0.8rem;
+        font-weight: normal;
+        color: #6d6b6b;
+      }
+
       @media (max-width: 600px) {
         .container {
           padding: 0.5rem;
@@ -107,7 +120,7 @@
           height: 100px;
         }
 
-        main > div:last-child {
+        .links {
           justify-content: center;
         }
       }
@@ -124,27 +137,9 @@
             class="profile-photo"
           />
           <div class="profile-info">
-            <h1 style="margin: 0; font-size: 1.2rem">Zechariah Campbell</h1>
-            <h2
-              style="
-                margin: 0;
-                font-size: 1rem;
-                font-weight: normal;
-                color: #666;
-              "
-            >
-              Full-Stack Engineer
-            </h2>
-            <h3
-              style="
-                margin: 0;
-                font-size: 0.8rem;
-                font-weight: normal;
-                color: #666;
-              "
-            >
-              Open to Work
-            </h3>
+            <h1 class="name">Zechariah Campbell</h1>
+            <h2 class="title">Full-Stack Engineer</h2>
+            <h3 class="subtitle">Open to Work</h3>
           </div>
         </div>
         <p>
@@ -167,8 +162,8 @@
           discuss how I can help with your next project.
         </p>
 
-        <div>
-          <a href="mailto:zech@moenet.org" target="_blank">Email</a>
+        <div class="links">
+          <a href="mailto:zech@moenet.org">Email</a>
           <a href="https://www.linkedin.com/in/zechdc" target="_blank"
             >LinkedIn</a
           >
