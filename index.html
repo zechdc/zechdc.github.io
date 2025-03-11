@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zech Campbell - Full-Stack Engineer</title>
+    <style>
+      body {
+        font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+        line-height: 1.6;
+        color: #333;
+        margin: 0;
+        padding: 0;
+        background-color: #ffffff;
+      }
+
+      .container {
+        max-width: 480px;
+        margin: 0 auto;
+        padding: 1rem;
+      }
+
+      .profile-section {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        text-align: left;
+        margin-bottom: 2rem;
+        gap: 1.5rem;
+      }
+
+      .profile-info {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.25rem;
+      }
+
+      .profile-photo {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 100px;
+        border: 2px solid #ffffff;
+        box-shadow: 0 2px 5px rgba(34, 28, 28, 0.145);
+      }
+
+      .gradient-accent {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 6px;
+        background: linear-gradient(90deg, #0036aa, #b795f3);
+      }
+
+      main {
+        background: white;
+        padding: 2rem;
+        border-radius: 12px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      }
+
+      p {
+        margin-bottom: 2rem;
+      }
+
+      a {
+        color: #2563eb;
+        text-decoration: none;
+        position: relative;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      /* Links container at the bottom */
+      main > div:last-child {
+        margin-top: 2rem;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+      }
+
+      /* Media queries for responsive design */
+      @media (max-width: 600px) {
+        .container {
+          padding: 0.5rem;
+        }
+
+        main {
+          padding: 1.5rem;
+        }
+
+        .profile-section {
+          flex-direction: column;
+          text-align: center;
+        }
+
+        .profile-info {
+          align-items: center;
+        }
+
+        .profile-photo {
+          width: 100px;
+          height: 100px;
+        }
+
+        main > div:last-child {
+          justify-content: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="gradient-accent"></div>
+    <div class="container">
+      <main>
+        <div class="profile-section">
+          <img
+            src="2025_profile_edited2_300x300.jpg"
+            alt="Zechariah Campbell"
+            class="profile-photo"
+          />
+          <div class="profile-info">
+            <h1 style="margin: 0; font-size: 1.2rem">Zechariah Campbell</h1>
+            <h2
+              style="
+                margin: 0;
+                font-size: 1rem;
+                font-weight: normal;
+                color: #666;
+              "
+            >
+              Full-Stack Engineer
+            </h2>
+            <h3
+              style="
+                margin: 0;
+                font-size: 0.8rem;
+                font-weight: normal;
+                color: #666;
+              "
+            >
+              Open to Work
+            </h3>
+          </div>
+        </div>
+        <p>
+          👋 Hey there! I'm Zech, a passionate full-stack engineer with a knack
+          for crafting exceptional web experiences.
+        </p>
+        <p>
+          Started building Flash games and websites in 2007, led engineering
+          initiatives at Square.com's ecommerce platform, and built:
+          <a href="https://tplanz.com" target="_blank">Tplanz</a>, a project
+          management tool inspired by Square's internal processes,
+          <a href="https://cafekit.io" target="_blank">Cafekit</a>, a solution
+          for cafe and bakery owners drawn from my experience starting a small
+          bakery, and
+          <a href="https://acquiregame.io" target="_blank">Acquire</a>, an
+          online implementation of a classic board game from my childhood.
+        </p>
+        <p>
+          I'm currently available for new opportunities and would love to
+          discuss how I can help with your next project.
+        </p>
+
+        <div>
+          <a href="mailto:zech@moenet.org" target="_blank">Email</a>
+          <a href="https://www.linkedin.com/in/zechdc" target="_blank"
+            >LinkedIn</a
+          >
+          <a href="https://medium.com/@zechdc" target="_blank">Medium</a>
+          <a href="https://dev.to/zechdc" target="_blank">Dev.to</a>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
