@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Zech Campbell - Full-Stack Engineer</title>
     <style>
+      /* Base styles */
       body {
         font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
         line-height: 1.6;
@@ -14,26 +15,35 @@
         background-color: #ffffff;
       }
 
-      .container {
+      /* Layout */
+      .profile {
         max-width: 480px;
         margin: 0 auto;
         padding: 1rem;
       }
 
-      .profile-section {
+      .profile__card {
+        background: white;
+        padding: 2rem;
+        border-radius: 12px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      }
+
+      /* Header section */
+      .profile__header {
         display: flex;
         align-items: center;
         margin-bottom: 2rem;
         gap: 1.5rem;
       }
 
-      .profile-info {
+      .profile__info {
         display: flex;
         flex-direction: column;
         gap: 0.25rem;
       }
 
-      .profile-photo {
+      .profile__photo {
         width: 150px;
         height: 150px;
         object-fit: cover;
@@ -42,7 +52,49 @@
         box-shadow: 0 2px 5px rgba(34, 28, 28, 0.145);
       }
 
-      .gradient-accent {
+      .profile__name {
+        margin: 0;
+        font-size: 1.2rem;
+      }
+
+      .profile__title {
+        margin: 0;
+        font-size: 1rem;
+        font-weight: normal;
+        color: #6d6b6b;
+      }
+
+      .profile__subtitle {
+        margin: 0;
+        font-size: 0.8rem;
+        font-weight: normal;
+        color: #6d6b6b;
+      }
+
+      /* Content */
+      .profile__content p {
+        margin-bottom: 2rem;
+      }
+
+      /* Links */
+      .profile__links {
+        margin-top: 2rem;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+      }
+
+      .profile__link {
+        color: #2563eb;
+        text-decoration: none;
+      }
+
+      .profile__link:hover {
+        text-decoration: underline;
+      }
+
+      /* Decorative elements */
+      .profile__accent {
         position: fixed;
         top: 0;
         left: 0;
@@ -51,124 +103,79 @@
         background: linear-gradient(90deg, #0036aa, #b795f3);
       }
 
-      main {
-        background: white;
-        padding: 2rem;
-        border-radius: 12px;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-      }
-
-      p {
-        margin-bottom: 2rem;
-      }
-
-      a {
-        color: #2563eb;
-        text-decoration: none;
-      }
-
-      a:hover {
-        text-decoration: underline;
-      }
-
-      .links {
-        margin-top: 2rem;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 1rem;
-      }
-
-      .name {
-        margin: 0;
-        font-size: 1.2rem;
-      }
-
-      .title {
-        margin: 0;
-        font-size: 1rem;
-        font-weight: normal;
-        color: #6d6b6b;
-      }
-
-      .subtitle {
-        margin: 0;
-        font-size: 0.8rem;
-        font-weight: normal;
-        color: #6d6b6b;
-      }
-
+      /* Responsive styles */
       @media (max-width: 600px) {
-        .container {
+        .profile {
           padding: 0.5rem;
         }
 
-        main {
+        .profile__card {
           padding: 1.5rem;
         }
 
-        .profile-section {
+        .profile__header {
           flex-direction: column;
           text-align: center;
         }
 
-        .profile-info {
+        .profile__info {
           align-items: center;
         }
 
-        .profile-photo {
+        .profile__photo {
           width: 100px;
           height: 100px;
         }
 
-        .links {
+        .profile__links {
           justify-content: center;
         }
       }
     </style>
   </head>
   <body>
-    <div class="gradient-accent"></div>
-    <div class="container">
-      <main>
-        <div class="profile-section">
+    <div class="profile__accent"></div>
+    <div class="profile">
+      <main class="profile__card">
+        <div class="profile__header">
           <img
             src="2025_profile_edited2_300x300.jpg"
             alt="Zechariah Campbell"
-            class="profile-photo"
+            class="profile__photo"
           />
-          <div class="profile-info">
-            <h1 class="name">Zechariah Campbell</h1>
-            <h2 class="title">Full-Stack Engineer</h2>
-            <h3 class="subtitle">Open to Work</h3>
+          <div class="profile__info">
+            <h1 class="profile__name">Zechariah Campbell</h1>
+            <h2 class="profile__title">Full-Stack Engineer</h2>
+            <h3 class="profile__subtitle">Open to Work</h3>
           </div>
         </div>
-        <p>
-          👋 Hey there! I'm Zech, a passionate full-stack engineer with a knack
-          for crafting exceptional web experiences.
-        </p>
-        <p>
-          Started building Flash games and websites in 2007, led engineering
-          initiatives at Square.com's ecommerce platform, and built:
-          <a href="https://tplanz.com" target="_blank">Tplanz</a>, a project
-          management tool inspired by Square's internal processes,
-          <a href="https://cafekit.io" target="_blank">Cafekit</a>, a solution
-          for cafe and bakery owners drawn from my experience starting a small
-          bakery, and
-          <a href="https://acquiregame.io" target="_blank">Acquire</a>, an
-          online implementation of a classic board game from my childhood.
-        </p>
-        <p>
-          I'm currently available for new opportunities and would love to
-          discuss how I can help with your next project.
-        </p>
+        <div class="profile__content">
+          <p>
+            👋 Hey there! I'm Zech, a passionate full-stack engineer with a knack
+            for crafting exceptional web experiences.
+          </p>
+          <p>
+            Started building Flash games and websites in 2007, led engineering
+            initiatives at <a href="https://square.com" target="_blank" class="profile__link">Square</a> for 5 years, and built:
+            <a href="https://tplanz.com" target="_blank" class="profile__link">TPlanz</a>, a project
+            management tool inspired by Square's internal processes,
+            <a href="https://cafekit.io" target="_blank" class="profile__link">CafeKit</a>, a solution
+            for cafe and bakery owners drawn from my experience starting a small
+            bakery, and
+            <a href="https://acquiregame.io" target="_blank" class="profile__link">Acquire</a>, an
+            online implementation of a classic board game from my childhood.
+          </p>
+          <p>
+            I'm currently available for new opportunities and would love to
+            discuss how I can help with your next project.
+          </p>
+        </div>
 
-        <div class="links">
-          <a href="mailto:zech@moenet.org">Email</a>
-          <a href="https://www.linkedin.com/in/zechdc" target="_blank"
-            >LinkedIn</a
-          >
-          <a href="https://medium.com/@zechdc" target="_blank">Medium</a>
-          <a href="https://dev.to/zechdc" target="_blank">Dev.to</a>
+        <div class="profile__links">
+          <a href="mailto:zech@moenet.org" class="profile__link">Email</a>
+          <a href="https://www.linkedin.com/in/zechdc" target="_blank" class="profile__link">LinkedIn</a>
+          <a href="https://medium.com/@zechdc" target="_blank" class="profile__link">Medium</a>
+          <a href="https://dev.to/zechdc" target="_blank" class="profile__link">Dev.to</a>
         </div>
       </main>
     </div>
